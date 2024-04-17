@@ -1,19 +1,21 @@
+print("Agregue los numeros separados por espacios:")
+Numeros = input().split()
 
-print("Dar numeros a la lista")
-Num = input()
+# Aqui en esta seccion procedo a filtar los datos invalidos y comvertir los datos a una lista de enteros
+DatosBuenos = []
+for Rem in Numeros: #itera en cada uno de los datos 
+    num = int(Rem) # comvierte los datos a numeros para poder compararlos
+    if 0 <= num <= 300: # agrego la condicion
+        DatosBuenos.append(num) # agrego datos a la lista
+    else: # si no cumplen nada de eso, le agregue que dijieran datos invalidos
+        print(f"El numero {num} es inválido. Debe estar entre el rango 0 a 300.")
 
-lista = []
-lista.append(Num)
-print("Esta es la lista original ", Num )
+# Aqui en esta parte, elimino los duplicados y los comvierto a una lista
+Resultado = list(set(DatosBuenos))
 
-Valoresborrado = set(Num)
-print("Asi quedo la lista despues de borrarlos ", Valoresborrado)
-
-Nuevalista = list(Valoresborrado)
-print("Asi queda al final ", Nuevalista)
+print("Resultado sin duplicados:", Resultado) #llamo a la variable con sus resultados correctos
 
 
-# Realizado por Julian Delgado
+# Realizado por Julian Delgado 
+# CC 1093591977
 
-#Profe tiene un error, pero cumple al hecho de eliminar datos repetidos
-#En mi casa creo el resto de procesos, ycumplo con las condicionales
