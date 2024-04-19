@@ -46,7 +46,7 @@ def calcularTotal():
 
 # Aqui en esta parte se finaliza la compra
 def finalizarCompra():
-    calcular_total()
+    calcularTotal()
     print("¡Gracias por tu compra!")
     carrito.clear()
 
@@ -69,11 +69,11 @@ while True:
         cantidad = int(input("Ingresa la cantidad: ")) # Se le pregunta al usuario la cantidad de vikingos que desea comprar.
         agregarCarrito(producto, cantidad) #Aqui se guarda el producto elegido y la cantidad.
     elif opc == "3":
-        mostrar_carrito()
+        mostrarCarrito()
     elif opc == "4":
-        calcular_total()
+        calcularTotal()
     elif opc == "5":
-        finalizar_compra()
+        finalizarCompra()
     elif opc == "6":
         print("¡Hasta luego!")
         break
